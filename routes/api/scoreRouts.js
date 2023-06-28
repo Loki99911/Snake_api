@@ -6,8 +6,7 @@ const {
 } = require("../../middlewars");
 const { schemaJoi } = require("../../models/score");
 
+router.post("/", ctrl.addScore);
 router.get("/", ctrl.listScores);
-
-router.post("/", validateBody(schemaJoi), ctrl.addScore);
 
 module.exports = router;

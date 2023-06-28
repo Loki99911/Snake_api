@@ -9,7 +9,4 @@ app.use(express.json());
 
 app.use("/api/score", scoreRouter);
 
-
 app.listen(PORT, () => console.log(`Server run on port:${PORT}`));
-
-// https://www.youtube.com/watch?v=p3RFMEixUOE
