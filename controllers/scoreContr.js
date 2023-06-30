@@ -12,6 +12,7 @@ const addScore = async (req, res) => {
 };
 
 const listScores = async (_, res) => {
+  db;
   const answer = await db.query("select * from score");
   res.json(answer.rows);
 };
