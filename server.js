@@ -3,6 +3,8 @@ const cors = require("cors");
 const scoreRouter = require("./routes/api/scoreRouts");
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
+// const HOST = process.env.DB_HOST;
+// console.log(">>>>>>",HOST);
 const app = express();
 // console.log(PORT);
 // console.log(process.env.HOST_DB);
