@@ -1,8 +1,7 @@
-const { HttpError, ctrlWrapper } = require("../helpers");
+const { ctrlWrapper } = require("../helpers");
 const db = require("../db");
 
 const addScore = async (req, res) => {
-  db;
   const { name, value } = req.body;
   const answer = await db.query(
     "INSERT INTO score(name, value) values ($1,$2) RETURNING *",
@@ -12,9 +11,7 @@ const addScore = async (req, res) => {
 };
 
 const listScores = async (_, res) => {
-  db;
   const answer = await db.query("select * from score");
-  console.log("ANSWER!!!!!!!!!!",answer);
   res.json(answer.rows);
 };
 
